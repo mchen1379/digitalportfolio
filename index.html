@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Engineering Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li onclick="scrollToSection('about')">about</li>
+      <li onclick="scrollToSection('experience')">experience</li>
+      <li onclick="scrollToSection('projects')">projects</li>
+      <li onclick="scrollToSection('contact')">contact</li>
+    </ul>
+  </nav>
+
+  <section class="landing" onclick="scrollToAbout()">
+    <div class="hero-text">
+      <h1>mandy chen</h1>
+      <h2>electrical engineer</h2>
+      <div class="scroll-hint">↓</div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="section-title">about me</h2>
+    <div class="about-container">
+      <div class="about-image">
+        <img src="IMG_2251.jpg" alt="Mandy">
+      </div>
+      <div class="about-text">
+        <p>
+          Hi, I’m Mandy, a senior at Cornell University studying Electrical and Computer Engineering. I’m interested in using engineering to uplift underserved communities by developing scalable solutions that broaden access to opportunity and essential services. I hope to pursue a career focused on improving public infrastructure such as transportation systems and buildings, as well as advancing sustainable energy solutions including fusion. Outside of engineering, I enjoy hiking, solo travel, bouldering, running, and making pottery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience" id="experience">
+    <h2 class="section-title">experience</h2>
+    <div class="experience-container">
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="exp-flex">
+              <img src="pulsepower.png" alt="PUFFIN lab">
+              <div class="exp-text">
+                <span class="exp-tag">January 2025 - May 2026</span>
+                <h3>Undergraduate Researcher, PUFFIN Lab</h3>
+                <ul class="exp-list">
+                  <li><strong>Plasma Physics Simulation & Modeling:</strong> Used the MHD code GORGON to simulate pulsed-power-driven plasma, optimizing parameters to ensure consistency in magnetic reconnection studies.</li>
+                  <li><strong>Data Visualization:</strong> Developed Python-based workflows to visualize complex plasma properties, translating raw simulation data into actionable insights.</li>
+                  <li><strong>Spectral Analysis & Validation:</strong> Modeled visible emission spectra for aluminum plasmas using ray-tracing and atomic physics codes, validating results against experimental data to accurately determine plasma states.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="exp-flex">
+              <img src="oharenew.jpg" alt="ARUP work">
+              <div class="exp-text">
+                <span class="exp-tag">June 2025 - August 2025</span>
+                  <h3>Electrical Engineering Intern, ARUP</h3>
+                  <ul class="exp-list">
+                    <li><strong>Electrical Systems Design:</strong> Designed and laid out commercial electrical systems—including receptacles, lighting, and exit signage—for high-profile sites like O’Hare International Airport and Salesforce offices.</li>
+                    <li><strong>Compliance & Quality Assurance:</strong> Ensured strict adherence to NEC standards through comprehensive plan reviews and on-site visits to validate installation accuracy.</li>
+                    <li><strong>Computational Tool Development:</strong> Developed a C#-based simulation tool for voltage drop analysis in copper and aluminum busways, utilizing NEC Table 9 impedance formulas and unit-tested validation for real-time reliability.</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="exp-flex">
+              <img src="hugoras.jpg" alt="Medtronic Internship">
+              <div class="exp-text">
+                <span class="exp-tag">June 2024 - August 2024</span>
+                <h3>Electrical Engineering Intern, Medtronic</h3>
+                <ul class="exp-list">
+                  <li><strong>Radar System Optimization:</strong> Calibrated and optimized mmWave radar sensor systems for the Hugo™ RAS platform, enhancing real-time precision tracking and collision avoidance.</li>
+                  <li><strong>Signal Integrity & Testing:</strong> Conducted 125 Cat5e cable tests across 36 hardware configurations, analyzing crosstalk and interference to improve data transmission reliability.</li>
+                  <li><strong>EMI Reduction:</strong> Implemented targeted cable and bulkhead configurations that reduced electromagnetic interference by 71.3%, enhancing system stability.</li>
+                  <li><strong>Technical Documentation:</strong> Authored comprehensive technical reports and SOPs for sensor calibration and data acquisition to streamline future system improvements.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+  <h2 class="section-title">projects</h2>
+  <div class="projects-container">
+    <div class="projects-grid">
+      
+      <div class="project-card" onclick="openProject('samurai')">
+        <img src="swordinhand.jpg" alt="Samurai Game">
+        <h3>Samurai Training Game</h3>
+        <p>An embedded motion-tracking system using IMU sensing and real-time haptic feedback to teach proper sword technique.</p>
+        <div class="skills-container">
+          <span class="skill-tag">C / C++</span>
+          <span class="skill-tag">RP2040</span>
+          <span class="skill-tag">Sensor Fusion</span>
+          <span class="skill-tag">PID Control</span>
+          <span class="skill-tag">Haptics</span>
+        </div>
+      </div>
+      
+      <div class="project-card" onclick="openProject('lwa')">
+        <img src="leakywaveantenna.png" alt="Leaky Wave Antenna">
+        <h3>Leaky Wave Antenna</h3>
+        <p>A balanced CRLH metamaterial leaky-wave antenna designed in Keysight ADS, featuring full-backfire to endfire beam steering from 2-4 GHz.</p>
+        <div class="skills-container">
+          <span class="skill-tag">RF Design</span>
+          <span class="skill-tag">Keysight ADS</span>
+          <span class="skill-tag">Electromagnetics</span>
+          <span class="skill-tag">Metamaterials</span>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openProject('optics')">
+        <img src="optics.png" alt="Wave Optics">
+        <h3>Wave Optics for Plasma Diagnostics</h3>
+        <p>Investigating wave-optics modeling for high-energy-density plasma diagnostics using pulsed laser experiments and Chromatix simulations.</p>
+        <div class="skills-container">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Computational Physics</span>
+          <span class="skill-tag">Laser Optics</span>
+          <span class="skill-tag">Chromatix</span>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openProject('park')">
+        <img src="dcplan.jpg" alt="Park Redesign">
+        <h3>Grietzer Memorial Park Redesign</h3>
+        <p>A comprehensive municipal park redesign in Johnson City, NY, focusing on ADA accessibility, green infrastructure, and community needs.</p>
+        <div class="skills-container">
+          <span class="skill-tag">Urban Planning</span>
+          <span class="skill-tag">ADA Compliance</span>
+          <span class="skill-tag">GIS</span>
+          <span class="skill-tag">Green Infrastructure</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">contact</h2>
+    <div class="contact-container">
+      <p>Email: mandychen1379@gmail.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/mandy-chen-cornell/">LinkedIn Profile</a></p>
+    </div>
+  </section>
+
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
