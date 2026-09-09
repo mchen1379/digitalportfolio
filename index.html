@@ -31,11 +31,11 @@
     <div class="about-container">
       <div class="about-image">
         <!-- <img src="IMG_2251.jpg" alt="Mandy"> -->
-        <img src="parisselfie2.jpeg" alt="Mandy">
+        <img src="madridselfie2.JPG" alt="Mandy">
       </div>
       <div class="about-text">
         <p>
-          Hi, I’m Mandy, a senior at Cornell University studying <strong>Electrical and Computer Engineering</strong>. I’m interested in using engineering to uplift underserved communities by developing scalable solutions that <strong> access to opportunity and essential services</strong>. I hope to pursue a career focused on improving <strong> public infrastructure</strong> such as transportation systems and buildings, as well as advancing <strong>sustainable energy solutions</strong> including fusion. Outside of engineering, I enjoy hiking, solo travel, bouldering, running, and making pottery.
+          Hi, I’m Mandy! I recently graduated from Cornell University with a degree in <strong>Electrical and Computer Engineering</strong>. I’m interested in using engineering to uplift underserved communities by developing scalable solutions that improve <strong> access to opportunity and essential services</strong>. I hope to pursue a career focused on improving <strong> public infrastructure</strong> such as transportation systems and buildings, or advancing <strong>sustainable energy solutions</strong> like fusion. Outside of engineering, I enjoy hiking, bouldering, running, and taking up creative art projects.
         </p>
       </div>
     </div>
@@ -45,6 +45,24 @@
     <h2 class="section-title">experience</h2>
     <div class="experience-container">
       <div class="timeline">
+
+        <div class="timeline-item"> 
+          <div class="timeline-dot"></div> 
+          <div class="timeline-content"> 
+            <div class="exp-flex"> 
+              <img src="digtwin.jpg" alt="SPARC Digital Twin"> 
+              <div class="exp-text"> 
+                <span class="exp-tag">June 2026 - August 2026</span> 
+                <h3>Plasma Physics Intern, Commonwealth Fusion Systems</h3> 
+                <ul class="exp-list"> 
+                  <li><strong>Agentic System Development:</strong> Built a physics-aware LLM agent with custom tools, skills, and shared memory to enable fusion operators to query and analyze SPARC tokamak data, validating performance through third-party user testing and quantitative human-vs-agent benchmarks.</li> 
+                  <li><strong>Machine Learning & Surrogate Modeling:</strong> Trained neural network surrogates for the HEAT plasma heat-flux code, achieving sub-millisecond inference and over 1000× speedup while scaling predictions from a single target to the full SPARC divertor.</li> 
+                  <li><strong>Simulation Database Automation:</strong> Developed an automated Python workflow to generate HEAT simulation databases across a plasma-parameter hyperspace, varying fRadDiv, λq, PSOL, and plasma equilibria to support neural network training and surrogate model development.</li> 
+                </ul> 
+              </div> 
+            </div> 
+          </div> 
+        </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
@@ -108,58 +126,134 @@
   <section class="projects" id="projects">
   <h2 class="section-title">projects</h2>
   <div class="projects-container">
-    <div class="projects-grid">
-      
-      <div class="project-card" onclick="openProject('samurai')">
-        <img src="swordinhand.jpg" alt="Samurai Game">
-        <h3>Samurai Training Game</h3>
-        <p>An embedded motion-tracking system using IMU sensing and real-time haptic feedback to teach proper sword technique.</p>
-        <div class="skills-container">
-          <span class="skill-tag">C / C++</span>
-          <span class="skill-tag">RP2040</span>
-          <span class="skill-tag">Sensor Fusion</span>
-          <span class="skill-tag">PID Control</span>
-          <span class="skill-tag">Haptics</span>
-        </div>
-      </div>
-      
-      <div class="project-card" onclick="openProject('lwa')">
-        <img src="leakywaveantenna.png" alt="Leaky Wave Antenna">
-        <h3>Leaky Wave Antenna</h3>
-        <p>A balanced CRLH metamaterial leaky-wave antenna designed in Keysight ADS, featuring full-backfire to endfire beam steering from 2-4 GHz.</p>
-        <div class="skills-container">
-          <span class="skill-tag">RF Design</span>
-          <span class="skill-tag">Keysight ADS</span>
-          <span class="skill-tag">Electromagnetics</span>
-          <span class="skill-tag">Metamaterials</span>
-        </div>
-      </div>
 
-      <div class="project-card" onclick="openProject('optics')">
-        <img src="optics.png" alt="Wave Optics">
-        <h3>Wave Optics and Laser Imaging</h3>
-        <p>Investigating wave-optics modeling for high-energy-density plasma diagnostics using pulsed laser experiments and Chromatix simulations.</p>
-        <div class="skills-container">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Computational Physics</span>
-          <span class="skill-tag">Laser Optics</span>
-          <span class="skill-tag">Chromatix</span>
+    <!-- Plasma Physics and Fusion Research -->
+    <div class="project-subsection">
+      <h3 class="subsection-title">Plasma Physics and Fusion Research</h3>
+      <div class="projects-list">
+        <div class="project-card" onclick="openProject('maize')">
+          <img src="thermalpres.jpg" alt="MAIZE Reconnection">
+          <h4>MAIZE External Field Reconnection</h4>
+          <p>Modeled plasma from parallel exploding wire arrays using GORGON 3D MHD simulations on the MAIZE facility, studying how external magnetic fields affect plasma expansion and magnetic reconnection dynamics.</p>
+          <div class="skills-container">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">MHD Simulations</span>
+            <span class="skill-tag">GORGON</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag">Parameter Tuning</span>
+          </div>
+        </div>
+        <div class="project-card" onclick="openProject('hed')">
+          <img src="spectrocover.jpg" alt="HED Plasma Spectroscopy">
+          <h4>HED Plasma Spectroscopy</h4>
+          <p>Diagnosing plasmas produced by intense electrical pulses on the Z machine using time-resolved optical spectroscopy, modeling visible spectra with atomic physics codes to determine temperature, density, and validate simulations.</p>
+          <div class="skills-container">
+            <span class="skill-tag">Spectral Modeling</span>
+            <span class="skill-tag">Spectral Analysis</span>
+            <span class="skill-tag">Plasma Characterization</span>
+            <span class="skill-tag">Matlab</span>
+          </div>
+        </div>
+        <div class="project-card" onclick="openProject('optics')">
+          <img src="opticscover.jpg" alt="Wave Optics">
+          <h4>Wave Optics and Laser Imaging</h4>
+          <p>Investigating wave-optics modeling for high-energy-density plasma diagnostics using pulsed laser experiments and Chromatix simulations.</p>
+          <div class="skills-container">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Computational Physics</span>
+            <span class="skill-tag">Laser Optics</span>
+            <span class="skill-tag">Chromatix</span>
+          </div>
         </div>
       </div>
-
-      <div class="project-card" onclick="openProject('park')">
-        <img src="dcplan.jpg" alt="Park Redesign">
-        <h3>Grietzer Memorial Park Redesign</h3>
-        <p>A comprehensive municipal park redesign in Johnson City, NY, focusing on ADA accessibility, green infrastructure, and community needs.</p>
-        <div class="skills-container">
-          <span class="skill-tag">Urban Planning</span>
-          <span class="skill-tag">ADA Compliance</span>
-          <span class="skill-tag">GIS</span>
-          <span class="skill-tag">Green Infrastructure</span>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Circuit Design -->
+    <div class="project-subsection">
+      <h3 class="subsection-title">Circuit Design</h3>
+      <div class="projects-list">
+        <div class="project-card" onclick="openProject('lwa')">
+          <img src="leakywaveantenna.png" alt="Leaky Wave Antenna">
+          <h4>Leaky Wave Antenna</h4>
+          <p>A balanced CRLH metamaterial leaky-wave antenna designed in Keysight ADS, featuring full-backfire to endfire beam steering from 2-4 GHz.</p>
+          <div class="skills-container">
+            <span class="skill-tag">RF Design</span>
+            <span class="skill-tag">Antenna Design</span>
+            <span class="skill-tag">Keysight ADS</span>
+            <span class="skill-tag">Electromagnetics</span>
+            <span class="skill-tag">Metamaterials</span>
+          </div>
+        </div>
+        <div class="project-card" onclick="openProject('lpf')">
+          <img src="lowpassfilter.jpg" alt="Low Pass Filter">
+          <h4>Maximally Flat Low Pass Filter</h4>
+          <p>Designed and fabricated a 3rd order maximally flat microwave filter using open-circuited shunt stubs on Rogers 6035HTC substrate.</p>
+          <div class="skills-container">
+            <span class="skill-tag">RF Design</span>
+            <span class="skill-tag">Microwave Engineering</span>
+            <span class="skill-tag">Keysight ADS</span>
+            <span class="skill-tag">Ansys HFSS</span>
+            <span class="skill-tag">Filter Design</span>
+          </div>
+        </div>
+        <div class="project-card" onclick="openProject('fcbc')">
+          <img src="flyingcapbuck.png" alt="Flying Capacitor Buck Converter">
+          <h4>Flying Capacitor Buck Converter</h4>
+          <p>Comprehensive multi-lab design, simulation, and optimization of a three-level flying capacitor buck converter using MATLAB, PLECS, and LTspice.</p>
+          <div class="skills-container">
+            <span class="skill-tag">Power Electronics</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">PLECS</span>
+            <span class="skill-tag">LTspice</span>
+            <span class="skill-tag">Control Theory</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Miscellaneous -->
+    <div class="project-subsection">
+      <h3 class="subsection-title">Miscellaneous</h3>
+      <div class="projects-list">
+        <div class="project-card" onclick="openProject('samurai')">
+          <img src="swordinhand.jpg" alt="Samurai Game">
+          <h4>Samurpi</h4>
+          <p>An embedded motion-tracking system using IMU sensing and real-time haptic feedback to teach proper sword technique.</p>
+          <div class="skills-container">
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">RP2040</span>
+            <span class="skill-tag">Microcontrollers</span>
+            <span class="skill-tag">PID Control</span>
+            <span class="skill-tag">Haptics</span>
+            <span class="skill-tag">Game Design</span>
+          </div>
+        </div>
+        <div class="project-card" onclick="openProject('park')">
+          <img src="dcplan.jpg" alt="Park Redesign">
+          <h4>Grietzer Memorial Park</h4>
+          <p>A comprehensive municipal park redesign in Johnson City, NY, focusing on ADA accessibility, green infrastructure, and community needs.</p>
+          <div class="skills-container">
+            <span class="skill-tag">Urban Planning</span>
+            <span class="skill-tag">ADA Compliance</span>
+            <span class="skill-tag">GIS</span>
+            <span class="skill-tag">Green Infrastructure</span>
+            <span class="skill-tag">Community Engagement</span>
+          </div>
+        </div>
+        <div class="project-card" onclick="openProject('mems')">
+          <img src="gyroscope.png" alt="MEMS Gyroscope">
+          <h4>MEMS Gyroscope</h4>
+          <p>Designed and optimized a single-axis MEMS gyroscope using COMSOL to maximize sensitivity while meeting fabrication and performance constraints.</p>
+          <div class="skills-container">
+            <span class="skill-tag">MEMS Design</span>
+            <span class="skill-tag">COMSOL Multiphysics</span>
+            <span class="skill-tag">Structural Mechanics</span>
+            <span class="skill-tag">Sensor Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 

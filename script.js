@@ -18,7 +18,7 @@ const projectDetails = {
     ],
     description: `
       <h3>Project Overview</h3>
-      <p>For my senior design project, I collaborated with a fellow electrical engineering student, Mark Franklin, to develop an interactive sword-training system called Samur-pi. The system used inertial measurement unit (IMU) sensing and real-time haptic feedback to guide users toward proper technique. We designed a custom wristband with an embedded IMU to capture motion data and integrated vibration motors into the sword handle to deliver intuitive, corrective feedback. The project required extensive hardware-software integration, with development primarily in C/C++, and allowed us to apply and extend concepts from ECE4760 (Microcontrollers). We pursued this project to explore how combining motion sensing with haptics can enhance the learning of complex physical skills.</p>
+      <p>For my senior design project, I collaborated with my friend (Mark Franklin) to develop an interactive sword-training system called Samur-pi. The system used inertial measurement unit (IMU) sensing and real-time haptic feedback to guide users toward proper technique. We designed a custom wristband with an embedded IMU to capture motion data and integrated vibration motors into the sword handle to deliver intuitive, corrective feedback. The project required extensive hardware-software integration, with development primarily in C/C++, and allowed us to apply and extend concepts from ECE4760 (Microcontrollers). We pursued this project to explore how combining motion sensing with haptics can enhance the learning of complex physical skills.</p>
       
       <h3>Technical Implementation</h3>
       <ul class="modal-list">
@@ -42,6 +42,65 @@ const projectDetails = {
     `
   },
 
+  maize: {
+    title: "MAIZE External Field Reconnection",
+    images: [
+      "maize2.jpg",
+      "sqmaize.jpg",
+      "simmaize.jpg"
+    ],
+    description: `
+      <h3>Project Overview</h3>
+      <p>During my junior year, I collaborated with two other undergraduate students, Jonathan Lee and David Johnson, to model the plasma formed by parallel exploding wire arrays. Using the three-dimensional magnetohydrodynamic code GORGON, we simulated the full evolution of a pulsed-power experiment conducted on the MAIZE facility at the University of Michigan. These experiments investigated how a plasma expands into a vacuum magnetic field, with cases of 0 T, 0.5 T, and 2 T applied external fields. Over the course of that semester, we worked to understand the underlying physics and validate our simulations against experimental data, which culminated in a paper on "Delayed Current Sheet Formation Due to an External Field in Pulsed-Power-Driven Reconnection Experiments" submitted to the Journal of Plasma Physics.</p>
+
+      <h3>Technical Implementation</h3>
+      <ul class="modal-list">
+        <li><strong>3D MHD Simulations:</strong> Utilized GORGON to simulate the full evolution of parallel exploding wire array experiments, capturing plasma formation and expansion dynamics across multiple applied magnetic field configurations.</li>
+        <li><strong>Data Visualization & Analysis:</strong> Produced visualizations of line-integrated electron density, pressure, and angular momentum, enabling direct comparison with experimental diagnostics and physical interpretation of simulation results.</li>
+        <li><strong>Parameter Tuning:</strong> Systematically tuned sensitive simulation parameters to achieve physically meaningful results that aligned with experimental observations, refining our understanding of magnetic reconnection in the presence of external fields.</li>
+      </ul>
+
+      <h3>Publication</h3>
+      <div style="height: 600px; overflow: hidden; border-radius: 12px; border: 1px solid #e2cdb8; margin-top: 15px;">
+        <iframe
+          src="https://drive.google.com/file/d/1AMzNr8K76HifQ5YTUCb0nrdZl9773j59/preview"
+          style="width: 100%; height: 100%; border: none;"
+          allowfullscreen>
+        </iframe>
+      </div>
+    `
+  },
+
+  lpf: {
+    title: "Maximally Flat Low Pass Filter",
+    images: [
+      "lowpassfilter.jpg",
+      "lowschematic.png"
+    ],
+    description: `
+      <h3>Project Overview</h3>
+      <p>For ECE4330 (Microwave Circuit Design), I collaborated with classmates Jodi and Mark to design and fabricate a 3rd order maximally flat microwave low-pass filter using open-circuited shunt stubs on Rogers 6035HTC substrate. The filter was designed to match 50Ω impedance and achieve a maximally flat passband response. The project involved end-to-end design, simulation, fabrication, and measurement validation using both Keysight VNA and NanoVNA equipment.</p>
+
+      <h3>Technical Implementation</h3>
+      <ul class="modal-list">
+        <li><strong>Filter Design:</strong> Designed a 3rd order maximally flat low-pass filter topology using open-circuited shunt stubs with precise impedance matching to 50Ω.</li>
+        <li><strong>Circuit Simulation:</strong> Modeled the filter in Keysight PathWave ADS, optimizing component values and geometries to meet frequency and magnitude specifications.</li>
+        <li><strong>EM Simulation & Optimization:</strong> Generated PCB layout and performed full-wave electromagnetic simulation in ADS EM simulator, then refined design for parasitic effects and substrate characteristics.</li>
+        <li><strong>Fabrication & Measurement:</strong> Fabricated design on Rogers 6035HTC substrate and validated performance using Keysight VNA (1001 points, 1 GHz span) and NanoVNA portable equipment with full calibration protocols.</li>
+        <li><strong>Results Analysis:</strong> Compared measured S-parameters (S11, S21) with circuit and EM simulated results, analyzing discrepancies due to fabrication tolerances and connector effects.</li>
+      </ul>
+
+      <h3>Lab Report</h3>
+      <div style="height: 600px; overflow: hidden; border-radius: 12px; border: 1px solid #e2cdb8; margin-top: 15px;">
+        <iframe
+          src="https://docs.google.com/document/d/1v_5iBWEfkbipWg79KCJhzKo5uwuNytVz/preview"
+          style="width: 100%; height: 100%; border: none;"
+          allowfullscreen>
+        </iframe>
+      </div>
+    `
+  },
+
   lwa: {
     title: "Leaky-Wave Antenna (2-4 GHz)",
     images: [
@@ -50,7 +109,7 @@ const projectDetails = {
       "antenna3d.png",
       "antennalayout.png",
       "leakywaveantenna2.png"
-      
+
     ],
     description: `
       <h3>Project Overview</h3>
@@ -86,6 +145,60 @@ const projectDetails = {
     `
   },
 
+  hed: {
+    title: "HED Plasma Spectroscopy",
+    images: [
+      "spectro.jpg"
+    ],
+    description: `
+      <h3>Project Overview</h3>
+      <p>When you excite thin wire arrays with intense electrical pulses, you create plasmas that are extremely hot, dense, and threaded with strong magnetic fields. Spectroscopy, the study of how matter absorbs, emits, or scatters light at different wavelengths, provides a powerful way to diagnose these extreme plasmas. Working with my research partner, Nedzma Srkalovic, and under the guidance of Professor Jack Hare, I analyzed time-resolved optical spectra from aluminum plasmas produced in experiments on the Z machine at Sandia National Laboratories. These plasmas reached temperatures exceeding 100,000 K. By analyzing the spectral data, we could gauge the plasma's temperature and density, validate our computer simulations, and deepen our understanding of plasma behavior under extreme conditions, insights that are critical for both astrophysical research and advanced fusion energy concepts.</p>
+
+      <h3>Technical Implementation</h3>
+      <ul class="modal-list">
+        <li><strong>Spectral Modeling:</strong> Used ray-tracing and atomic physics codes to model visible emission spectra from aluminum plasmas, accounting for radiative transfer and atomic processes under extreme conditions.</li>
+        <li><strong>Spectral Analysis:</strong> Employed existing analysis codes and atomic models to interpret time-resolved optical spectra obtained from Z machine experiments, extracting plasma diagnostics from experimental data.</li>
+        <li><strong>Plasma Characterization:</strong> Compared simulated spectra with experimental results to determine plasma properties including temperature, density, and composition, validating MHD simulations against laboratory observations.</li>
+      </ul>
+
+      <h3>Presentation</h3>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+        <iframe
+          src="https://docs.google.com/presentation/d/1Agn2yrYZqIPvBumOH536Md-eRgLo7sFiDiB5Igjcj-8/embed?start=false&loop=false"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+          allowfullscreen>
+        </iframe>
+      </div>
+    `
+  },
+
+  fcbc: {
+    title: "Flying Capacitor Buck Converter",
+    images: ["flyingcapbuck.png", "flyingcapoutcomes.png"],
+    description: `
+      <h3>Project Overview</h3>
+      <p>For Advanced Power Electronics (ECE6560), I completed a comprehensive multi-lab project involving the design, simulation, optimization, and control of a three-level flying capacitor buck converter. The work spanned five progressive labs, integrating steady-state analysis, electromagnetic simulation, loss estimation, design optimization, and closed-loop control implementation. The project demonstrated the full power electronics design cycle, from theoretical analysis to practical implementation, using industry-standard tools including MATLAB, PLECS, and LTspice.</p>
+
+      <h3>Technical Implementation</h3>
+      <ul class="modal-list">
+        <li><strong>Steady-State Analysis (Lab 1):</strong> Generated periodic steady-state waveforms using augmented state-space matrices and validated results against PLECS simulations. Analyzed inductor current, output capacitor voltage, and flying capacitor voltage across multiple operating conditions with different component values and duty ratios.</li>
+        <li><strong>Transistor Loss Analysis (Lab 2):</strong> Evaluated power dissipation in EPC2066 GaN transistors using both LTspice SPICE models and analytical loss estimation from MATLAB waveforms. Compared conduction losses, switching losses, and gate drive losses under various operating conditions, including zero-voltage switching (ZVS) analysis.</li>
+        <li><strong>Inductor Design Optimization (Lab 3):</strong> Optimized inductor designs across nine ELP+I core combinations using Fourier analysis and magnetic design equations. Evaluated loss-volume trade-offs and identified dominant loss mechanisms (core vs. winding loss) for different converter specifications.</li>
+        <li><strong>Full Design-Space Exploration (Lab 4):</strong> Performed multi-dimensional optimization across switching frequency (100 kHz–1 MHz), inductance (0.1–2 μH), and five GaN transistor candidates. Generated Pareto-optimal designs balancing total converter loss and volume, with power density calculations for practical implementation guidance.</li>
+        <li><strong>Closed-Loop Control (Lab 5):</strong> Designed proportional-integral (PI) controller for output voltage regulation. Implemented discrete-time control in PLECS, comparing transient response under continuous and discrete control with load step changes.</li>
+      </ul>
+
+      <h3>Key Results</h3>
+      <ul class="modal-list">
+        <li>Generated and validated steady-state waveforms for multiple operating points</li>
+        <li>Quantified transistor losses and identified ZVS operating conditions</li>
+        <li>Selected optimized inductor design with favorable loss-volume trade-off</li>
+        <li>Identified Pareto-optimal converter designs for efficient power delivery</li>
+        <li>Demonstrated robust closed-loop control performance with load transients</li>
+      </ul>
+    `
+  },
+
   optics: {
     title: "Wave Optics and Laser Imaging",
     images: [
@@ -117,6 +230,35 @@ const projectDetails = {
       </div>
     `
   },
+
+mems: {
+  title: "MEMS Gyroscope Optimization",
+  images: ["gyroscope.png"],
+  description: `
+    <h3>Project Overview</h3>
+    <p>For this individual MEMS design project, I designed and optimized a single-axis gyroscope to maximize output voltage sensitivity while meeting strict fabrication and performance constraints. The gyroscope leverages the Coriolis force principle to sense rotation: a proof mass is actuated along the drive axis, and the resulting Coriolis-induced displacement along the orthogonal sense axis is measured to determine rotation rate. Using COMSOL finite-element analysis combined with analytical calculations, I tuned structural parameters including spring constants, resonant frequencies, and proof mass geometry to achieve sensitivity exceeding 150 nV/(rad/sec) within a 2 mm × 2 mm footprint.</p>
+
+    <h3>Technical Implementation</h3>
+    <ul class="modal-list">
+      <li><strong>Design Optimization:</strong> Optimized drive and sense spring constants and resonant frequencies to maximize responsiveness to Coriolis force while maintaining stability and meeting frequency constraints (≥2 kHz minimum resonance).</li>
+      <li><strong>COMSOL Simulation:</strong> Performed structural mechanics analysis in COMSOL to model displacement response, validate resonant frequencies, and characterize drive and sense mode behavior across the operating frequency range.</li>
+      <li><strong>Coriolis Force Analysis:</strong> Calculated Coriolis force generation and sense-axis displacement as functions of drive velocity and input rotation rate; determined theoretical output voltage sensitivity using transimpedance amplifier gain constraints (≤10 kΩ).</li>
+      <li><strong>Transimpedance Amplification:</strong> Designed readout electronics with controlled transimpedance gain to convert sense-mode displacement into measurable voltage output while maintaining noise performance and linearity.</li>
+      <li><strong>Performance Characterization:</strong> Computed noise floor, sensitivity, and resolution metrics; validated design against all specifications including maximum drive voltage (1 V), design area (<2 mm²), and output voltage sensitivity (≥150 nV/(rad/sec)).</li>
+    </ul>
+
+    <h3>Design Specifications Met</h3>
+    <ul class="modal-list">
+      <li>Supply Voltage: 10 V</li>
+      <li>Maximum Drive Voltage: 1 V</li>
+      <li>Minimum Resonant Frequency: ≥2 kHz</li>
+      <li>Maximum Transimpedance Gain: ≤10 kΩ</li>
+      <li>Minimum Sensitivity: ≥150 nV/(rad/sec)</li>
+      <li>Design Area: <2 mm × 2 mm</li>
+      <li>Material: Single-crystal silicon, 120 μm device layer</li>
+    </ul>
+  `
+},
 
 park: {
   title: "Grietzer Memorial Park Redesign",
@@ -161,22 +303,43 @@ function openProject(projectId) {
   const data = projectDetails[projectId];
 
   if (data) {
-    body.innerHTML = `
-      <div class="modal-grid">
-        
-        <div class="modal-images">
-          ${data.images.map(img => `<img src="${img}">`).join("")}
-        </div>
-
-        <div class="modal-text">
-          <h2>${data.title}</h2>
-          <div class="modal-description">
-            ${data.description}
+    if (projectId === 'mems') {
+      body.innerHTML = `
+        <div class="modal-grid">
+          <div style="border-radius: 12px; border: 1px solid #e2cdb8; overflow: hidden;">
+            <iframe
+              src="https://drive.google.com/file/d/1cTrEhFRPRWQjSb3GiPhJ2Y7TIIiqWsaA/preview"
+              style="width: 100%; height: 600px; border: none;"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="modal-text">
+            <h2>${data.title}</h2>
+            <div class="modal-description">
+              ${data.description}
+            </div>
           </div>
         </div>
+      `;
+    } else {
+      const imagesClass = (projectId === 'hed' || projectId === 'lpf' || projectId === 'fcbc') ? 'modal-images hed-single-column' : 'modal-images';
+      body.innerHTML = `
+        <div class="modal-grid">
 
-      </div>
-    `;
+          <div class="${imagesClass}">
+            ${data.images.map(img => `<img src="${img}">`).join("")}
+          </div>
+
+          <div class="modal-text">
+            <h2>${data.title}</h2>
+            <div class="modal-description">
+              ${data.description}
+            </div>
+          </div>
+
+        </div>
+      `;
+    }
 
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
