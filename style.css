@@ -28,6 +28,21 @@
   src: url('ImpactExtravagant.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'ZTNatureMedium';
+  src: url('ZTNatureMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BingBoss';
+  src: url('BingBoss.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NaughtyMonster';
+  src: url('NaughtyMonster.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -70,6 +85,11 @@ body {
   transform: translateY(-2px);
 }
 
+.navbar li.active {
+  border-bottom: 3px solid white;
+  padding-bottom: 5px;
+}
+
 /* ================= LANDING ================= */
 .landing {
   height: 100vh;
@@ -106,7 +126,7 @@ body {
 /* ================= TITLES ================= */
 .section-title {
   font-family: 'Sirukota', sans-serif;
-  font-size: 3.8rem;
+  font-size: 4.2rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: 20px; /* Reduced for tighter spacing */
@@ -244,15 +264,15 @@ body {
 }
 
 .subsection-title {
-  font-family: 'ImpactExtravagant', sans-serif;
-  font-size: 2.5rem;
+  font-family: 'ZTNatureMedium', sans-serif;
+  font-size: 1.9rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   color: #5A4636;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 0;
   border-bottom: 2px solid #e2cdb8;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
 }
 
 .projects-list {
@@ -272,8 +292,8 @@ body {
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .project-card img {

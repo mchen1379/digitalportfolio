@@ -5,6 +5,28 @@ function scrollToSection(id) {
   });
 }
 
+// Active navigation indicator
+function updateActiveNav() {
+  const sections = ['about', 'experience', 'projects', 'contact'];
+  const navItems = document.querySelectorAll('.navbar li');
+
+  let current = '';
+  sections.forEach(section => {
+    const element = document.getElementById(section);
+    if (element && element.offsetTop <= window.scrollY + 200) {
+      current = section;
+    }
+  });
+
+  navItems.forEach(item => item.classList.remove('active'));
+  if (current) {
+    const activeItem = document.querySelector(`.navbar li[onclick="scrollToSection('${current}')"]`);
+    if (activeItem) activeItem.classList.add('active');
+  }
+}
+
+window.addEventListener('scroll', updateActiveNav);
+
 // Project Content Database (UNCHANGED TEXT, only added "images")
 const projectDetails = {
   samurai: {
